@@ -1,0 +1,497 @@
+IMMUNIZATION PERCENTAGE FOR MEASLES AND DTP3 FOR 192 DIFFERENT COUNTRIES (MATLAB).
+
+# CONTINUOUS PLOTS
+
+SUBCOLUMN 1:- IMMUNIZATION PERCENTAGE FOR MEASLES 
+Command;-
+plot(ms,'-k');
+xlabel('countries');
+ylabel('Immunization percentage for measles ');
+
+SUBCOLUMN 2:- IMMUNIZATION PERCENTAGE FOR DTP3
+Command:
+plot(d3,'-r');
+xlabel('countries');
+ylabel('Immunization percentage for DTP3');
+
+# DISCRETE PLOTS
+
+SUBCOLUMN 1:- IMMUNIZATION PERCENTAGE FOR MEASLES 
+Command;-
+stem(ms,'k');
+xlabel('countries');
+ylabel('Immunization percentage for measles ');
+
+SUBCOLUMN 2:- IMMUNIZATION PERCENTAGE FOR DTP3
+Command:
+stem(d3,'r');
+xlabel('countries');
+ylabel('Immunization percentage for DTP3 ');
+
+*********************************SIGNAL MANIPULATION*********************************
+
+1)	AUTO CORRELATION OF IMMUNIZATION PERCENTAGE PLOT OF MEASLES 
+
+n=1:192;
+y=ms;
+subplot(2,1,1)
+stem(n,x);
+title('Signal--Immunization percentage for measles for 192 countries x(n)');
+xlabel('192 different countries');
+ylabel('Immunization percentage for measles for 192 countries'); 
+r=autocorr(y);
+subplot(2,1,2);
+stem(r);
+title('auto correlated signal x(n)');
+xlabel('192 different countries');
+ylabel('Immunization percentage for measles for 192 countries');
+
+2) AUTO CORRELATION OF IMMUNIZATION PERCENTAGE PLOT OF DTP3
+
+n=1:192;
+y=d3;
+subplot(2,1,1)
+stem(n,x);
+title('Signal--Immunization percentage for DTP3 for 192 countries y(n)');
+xlabel('192 different countries');
+ylabel('Immunization percentage for DTP3 for 192 countries'); 
+r=autocorr(y);
+subplot(2,1,2);
+stem(r);
+title('auto correlated signal y(n)');
+xlabel('192 different countries');
+ylabel('Immunization percentage for DTP3 ');
+
+3) CROSS CORRELATION OF IMMUNIZATION PERCENTAGE PLOT FOR MEASLES AND DTP3
+
+n=1:192;
+x=ms;
+subplot(3,1,1)
+stem(n,x);
+title('Signal Immunization percentage for measles for 192 countries x(n)');
+xlabel('countries');
+ylabel('Immunization percentage for measles.');
+y=d3;
+subplot(3,1,2);
+stem(n,y);
+title('Signal Immunization percentage for DTP3 for 192 countries y(n)');
+xlabel('countries');
+ylabel('Immunization percentage for DTP3.');
+r=xcorr(x,y);
+subplot(3,1,3);
+stem(r);
+title('cross correlated signal z(n)');
+xlabel('countries');
+ylabel('Immunization percentage for measles and DTP3.');
+
+4) ADDITION OF IMMUNIZATION PERCENTAGE PLOT FOR MEASLES AND DTP3
+
+x=ms;
+subplot(3,1,1);
+stem(x,'r');
+title('Signal Immunization percentage for measles for 192 countries x(n)');
+xlabel('countries')
+ylabel('Immunization percentage for Measles.');
+y=d3;
+subplot(3,1,2);
+stem(y,'g');
+title('Signal Immunization percentage for DTP3 for 192 countries y(n)');
+xlabel('countries');
+ylabel('Immunization percentage for DTP3.');
+z=x+y;
+subplot(3,1,3);
+stem(z,'k');
+title('Signal Immunization percentage for Measles and DTP3 added for 192 countries y(n)');
+xlabel('countries');
+ylabel('Immunization percentage for DTP3 and measles.');
+
+x=ms;
+subplot(3,1,1);
+plot(x,'-r');
+title('Signal Immunization percentage for measles for 192 countries x(n)');
+xlabel('countries')
+ylabel('Immunization percentage for Measles.');
+y=d3;
+subplot(3,1,2);
+plot(y,'-g');
+title('Signal Immunization percentage for DTP3 for 192 countries y(n)');
+xlabel('countries');
+ylabel('Immunization percentage for DTP3.');
+z=x+y;
+subplot(3,1,3);
+plot(z,'-k');
+title('Signal Immunization percentage for Measles and DTP3 added for 192 countries y(n)');
+xlabel('countries');
+ylabel('Immunization percentage for DTP3 and measles.');
+
+
+5) SUBTRACTION OF IMMUNIZATION PERCENTAGE PLOT FOR MEASLES AND DTP3
+
+x=ms;
+subplot(3,1,1);
+stem(x,'r');
+title('Signal Immunization percentage for measles for 192 countries x(n)');
+xlabel('countries')
+ylabel('Immunization percentage for Measles.');
+y=d3;
+subplot(3,1,2);
+stem(y,'g');
+title('Signal Immunization percentage for DTP3 for 192 countries y(n)');
+xlabel('countries');
+ylabel('Immunization percentage for DTP3.');
+z=x-y;
+subplot(3,1,3);
+stem(z,'k');
+title('Signal Immunization percentage for Measles and DTP3 subtracted for 192 countries z(n)');
+xlabel('countries');
+ylabel('Immunization percentage for DTP3 and measles.');
+
+6) MULTIPLICATION OF IMMUNIZATION PERCENTAGE PLOT FOR MEASLES AND DPT3
+
+x=ms;
+subplot(3,1,1);
+stem(x,'r');
+title('Signal Immunization percentage for measles for 192 countries x(n)');
+xlabel('countries')
+ylabel('Immunization percentage for Measles.');
+y=d3;
+subplot(3,1,2);
+stem(y,'g');
+title('Signal Immunization percentage for DTP3 for 192 countries y(n)');
+xlabel('countries');
+ylabel('Immunization percentage for DTP3.');
+z=x.*y;
+subplot(3,1,3);
+stem(z,'k');
+title('Signal Immunization percentage for Measles and DTP3 multiplied for 192 countries z(n)');
+xlabel('countries');
+ylabel('Immunization percentage for DTP3 and measles.');
+
+x=ms;
+subplot(3,1,1);
+plot(x,'-r');
+title('Signal Immunization percentage for measles for 192 countries x(n)');
+xlabel('countries')
+ylabel('Immunization percentage for Measles.');
+y=d3;
+subplot(3,1,2);
+plot(y,'-g');
+title('Signal Immunization percentage for DTP3 for 192 countries y(n)');
+xlabel('countries');
+ylabel('Immunization percentage for DTP3.');
+z=x.*y;
+subplot(3,1,3);
+plot(z,'-k');
+title('Signal Immunization percentage for Measles and DTP3 multiplied for 192 countries z(n)');
+xlabel('countries');
+ylabel('Immunization percentage for DTP3 and measles.');
+
+7) TIME SHIFTING OF IMMUNIZATION PERCENTAGE PLOT FOR MEASLES 
+
+%n1=AMOUNT TO BE DELAYED.
+%n2=AMOUNT TO BE ADVANCED.
+n1=15;
+n2=10;
+n=1:192;
+x=ms;
+subplot(3,1,1);
+stem(n,x,'r');
+title('Signal Immunization percentage for measles for 192 countries x(n)');
+xlabel('countries')
+ylabel('Immunization percentage for Measles.');
+m=n+n1;
+y=x;
+subplot(3,1,2);
+stem(m,y,'g');
+title('Delayed Immunization percentage for measles siganl, x(n-n1)');
+xlabel('countries')
+ylabel('Immunization percentage for Measles.');
+t=n-n2;
+z=x;
+subplot(3,1,3);
+stem(t,z,'k');
+title('Advanced Immunization percentage for measles siganl,x(n+n2)');
+xlabel('countries')
+ylabel('Immunization percentage for Measles.');
+
+%n1=AMOUNT TO BE DELAYED.
+%n2=AMOUNT TO BE ADVANCED.
+n1=15;
+n2=10;
+n=1:192;
+x=ms;
+subplot(3,1,1);
+plot(n,x,'-r');
+title('Signal Immunization percentage for measles for 192 countries x(n)');
+xlabel('countries')
+ylabel('Immunization percentage for Measles.');
+m=n+n1;
+y=x;
+subplot(3,1,2);
+plot(m,y,'-g');
+title('Delayed Immunization percentage for measles siganl, x(n-n1)');
+xlabel('countries')
+ylabel('Immunization percentage for Measles.');
+t=n-n2;
+z=x;
+subplot(3,1,3);
+plot(t,z,'-k');
+title('Advanced Immunization percentage for measles siganl,x(n+n2)');
+xlabel('countries')
+ylabel('Immunization percentage for Measles.');
+
+8) TIME SHIFTING OF IMMUNIZATION PERCENTAGE PLOT FOR DTP3
+
+%n1=AMOUNT TO BE DELAYED.
+%n2=AMOUNT TO BE ADVANCED.
+n1=15;
+n2=10;
+n=1:192;
+x=d3;
+subplot(3,1,1);
+stem(n,x,'r');
+title('Signal Immunization percentage for DTP3 for 192 countries y(n)');
+xlabel('countries')
+ylabel('Immunization percentage for DTP3.');
+m=n+n1;
+y=x;
+subplot(3,1,2);
+stem(m,y,'g');
+title('Delayed Immunization percentage for DTP3 siganl, y(n-n1)');
+xlabel('countries')
+ylabel('Immunization percentage for DTP3.');
+t=n-n2;
+z=x;
+subplot(3,1,3);
+stem(t,z,'k');
+title('Advanced Immunization percentage for DTP3 siganl,y(n+n2)');
+xlabel('countries')
+ylabel('Immunization percentage for DTP3.');
+
+%n1=AMOUNT TO BE DELAYED.
+%n2=AMOUNT TO BE ADVANCED.
+n1=15;
+n2=10;
+n=1:192;
+x=ms;
+subplot(3,1,1);
+plot(n,x,'-r');
+title('Signal Immunization percentage for DTP3 for 192 countries y(n)');
+xlabel('countries')
+ylabel('Immunization percentage for DTP3.');
+m=n+n1;
+y=x;
+subplot(3,1,2);
+plot(m,y,'-g');
+title('Delayed Immunization percentage for DTP3 siganl, y(n-n1)');
+xlabel('countries')
+ylabel('Immunization percentage for DTP3.');
+t=n-n2;
+z=x;
+subplot(3,1,3);
+plot(t,z,'-k');
+title('Advanced Immunization percentage for DTP3 siganl,y(n+n2)');
+xlabel('countries')
+ylabel('Immunization percentage for DTP3.');
+
+9) TIME REVERSAL OF IMMUNIZATION PERCENTAGE PLOT FOR MEASLES
+
+n=1:192;
+x=ms;
+subplot(2,1,1)
+stem(n,x,'k');
+axis([-200 200 -200 200]);
+title('Signal Immunization percentage for Measles for 192 countries x(n)');
+xlabel('countries')
+ylabel('Immunization percentage for Measles.');
+c=fliplr(x);
+y=fliplr(-n);
+subplot(2,1,2);
+stem(y,c,'g');
+axis([-200 200 -200 200]);
+title('Reversed signal x(n)');
+xlabel('countries')
+ylabel('Immunization percentage for Measles.');
+
+n=1:192;
+x=ms;
+subplot(2,1,1)
+plot(n,x,'-k');
+axis([-200 200 -200 200]);
+title('Signal Immunization percentage for Measles for 192 countries x(n)');
+xlabel('countries')
+ylabel('Immunization percentage for Measles.');
+c=fliplr(x);
+y=fliplr(-n);
+subplot(2,1,2);
+plot(y,c,'-g');
+axis([-200 200 -200 200]);
+title('Reversed signal x(n)');
+xlabel('countries')
+ylabel('Immunization percentage for Measles.');
+
+10) TIME REVERSAL OF IMMUNIZATION PERCENTAGE PLOT FOR DPT3
+
+n=1:192;
+x=d3;
+subplot(2,1,1)
+stem(n,x,'k');
+axis([-200 200 -200 200]);
+title('Signal Immunization percentage for DTP3 for 192 countries y(n)');
+xlabel('countries')
+ylabel('Immunization percentage for DTP3.');
+c=fliplr(x);
+y=fliplr(-n);
+subplot(2,1,2);
+stem(y,c,'g');
+axis([-200 200 -200 200]);
+title('Reversed signal y(n)');
+xlabel('countries')
+ylabel('Immunization percentage for DTP3.');
+
+n=1:192;
+x=d3;
+subplot(2,1,1)
+plot(n,x,'-k');
+axis([-200 200 -200 200]);
+title('Signal Immunization percentage for DTP3 for 192 countries y(n)');
+xlabel('countries')
+ylabel('Immunization percentage for DTP3.');
+c=fliplr(x);
+y=fliplr(-n);
+subplot(2,1,2);
+plot(y,c,'-g');
+axis([-200 200 -200 200]);
+title('Reversed signal y(n)');
+xlabel('countries')
+ylabel('Immunization percentage for DTP3.');
+% n=1:192;
+
+11) TIME SCALING (CONTRACTION) OF IMMUNIZATION PERCENTAGE PLOT FOR MASSES
+
+x=1:192; 
+y=ms; 
+b=2; 
+subplot(2,1,1); 
+stem(x, y, '-k'); 
+axis([0,200,0,200]); 
+title('Signal Immunization percentage for Measles for 192 countries x(n)');
+xlabel('countries')
+ylabel('Immunization percentage for Measles.');
+t=x/b; 
+subplot(2,1,2); 
+stem(t,y, '-r');
+title('Scaled by 2-x(n)/2');
+xlabel('countries')
+ylabel('Immunization percentage for Measles.');
+axis([0,200,0,200]); 
+
+x=1:192; 
+y=ms; 
+b=2; 
+subplot(2,1,1); 
+plot(x, y, '-k'); 
+axis([0,200,0,200]); 
+title('Signal Immunization percentage for Measles for 192 countries x(n)');
+xlabel('countries')
+ylabel('Immunization percentage for Measles.');
+t=x/b; 
+subplot(2,1,2); 
+plot(t,y, '-r');
+title('Scaled by 2-x(n)/2');
+xlabel('countries')
+ylabel('Immunization percentage for Measles.');
+axis([0,200,0,200]); 
+
+12) TIME SCALING (EXPANSION) OF IMMUNIZATION PERCENTAGE PLOT FOR DPT3
+
+x=1:192; 
+y=d3; 
+b=2; 
+subplot(2,1,1); 
+stem(x, y, '-k'); 
+axis([0,400,0,200]); 
+title('Signal Immunization percentage for DTP3 for 192 countries y(n)');
+xlabel('countries')
+ylabel('Immunization percentage for DTP3.');
+t=x*b; 
+subplot(2,1,2); 
+stem(t,y, '-r');
+title('Scaled by 2-y(n)*2');
+xlabel('countries')
+ylabel('Immunization percentage for DTP3.');axis([0,400,0,200]); 
+
+x=1:192; 
+y=d3; 
+b=2; 
+subplot(2,1,1); 
+plot(x, y, '-k'); 
+axis([0,400,0,200]); 
+title('Signal Immunization percentage for DTP3 for 192 countries y(n)');
+xlabel('countries')
+ylabel('Immunization percentage for DTP3.');
+t=x*b; 
+subplot(2,1,2); 
+plot(t,y, '-r');
+title('Scaled by 2-y(n)*2');
+xlabel('countries')
+ylabel('Immunization percentage for DTP3.');
+axis([0,400,0,200]); 
+
+13) CONVOLUTION OF IMMUNIZATION PERCENTAGE PLOT FOR MEASLES AND DPT3
+
+n1=1:192;
+n2=1:192;
+subplot(3,1,1);
+x=ms;
+y=d3;
+stem(n1,x);
+title('Signal Immunization percentage for Measles for 192 countries x(n)');
+xlabel('countries')
+ylabel('Immunization percentage for Measles.');
+subplot(3,1,2);
+stem(n2,y);
+title('Signal Immunization percentage for DTP3 for 192 countries h(n)');
+xlabel('countries')
+ylabel('Immunization percentage for DTP3.');
+z=conv(x,y);
+t=length(n1)+length(n2)-1;
+s=0:t-1;
+subplot(3,1,3);
+stem(s,z);
+title('convolution output-y(n)');
+xlabel('countries')
+ylabel('Immunization percentage for Measles and DTP3.');
+
+n1=1:192;
+n2=1:192;
+subplot(3,1,1);
+x=ms;
+y=d3;
+plot(n1,x,'-r');
+title('Signal Immunization percentage for Measles for 192 countries x(n)');
+xlabel('countries')
+ylabel('Immunization percentage for Measles.');
+subplot(3,1,2);
+plot(n2,y,'-g');
+title('Signal Immunization percentage for DTP3 for 192 countries h(n)');
+xlabel('countries')
+ylabel('Immunization percentage for DTP3.');
+z=conv(x,y);
+t=length(n1)+length(n2)-1;
+s=0:t-1;
+subplot(3,1,3);
+plot(s,z,'-k');
+title('convolution output-y(n)');
+xlabel('countries')
+ylabel('Immunization percentage for Measles and DTP3.');
+
+
+
+
+
+
+
+
+
+
