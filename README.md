@@ -11,16 +11,15 @@ In this operation a single time series is considered. Its main purpose is to fin
     <img width="400" height="400" src="https://user-images.githubusercontent.com/67193440/178097850-9c773547-39f8-4e7f-89fe-8e787fdc3e86.png">
 </p>
 
-<p align'center" width="100%> Example Code for auto-correlation in MATLAB for lag=15,
+Example Code for auto-correlation in MATLAB for lag=15,
 acf = autocorr(Y,'NumLags',15);
-</p>
 
 ## 2) Cross-correlation:
 
 Cross-correlation is used to find similarity of two series as a function of the displacement of one with respect to the other (shifted/lagged). In this operation, two different time series are evaluated at the same instance. If the cross-correlation coefficient is 1, then the two signals under consideration have a high similarity/direct relationship.
 
 <p align="center" width="100%">
-    <img width="400" height="400" src="https://user-images.githubusercontent.com/67193440/178098124-ae979fca-c219-471d-b0b7-e1924d29c0ea.png">
+    <img width="400" height="400" src="https://user-images.githubusercontent.com/67193440/178097850-9c773547-39f8-4e7f-89fe-8e787fdc3e86.png">
 </p>
 
 Example code for Cross-correlation in MATLAB is:
