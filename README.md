@@ -11,8 +11,8 @@ In this operation a single time series is considered. Its main purpose is to fin
     <img width="400" height="400" src="https://user-images.githubusercontent.com/67193440/178097850-9c773547-39f8-4e7f-89fe-8e787fdc3e86.png">
 </p>
 
- 							Example Code for auto-correlation in MATLAB for lag=15,
-								acf = autocorr(Y,'NumLags',15);
+Example Code for auto-correlation in MATLAB for lag=15,
+acf = autocorr(Y,'NumLags',15);
 
 ## 2) Cross-correlation:
 
@@ -22,10 +22,9 @@ Cross-correlation is used to find similarity of two series as a function of the 
     <img width="400" height="400" src="https://user-images.githubusercontent.com/67193440/178098124-ae979fca-c219-471d-b0b7-e1924d29c0ea.png">
 </p>
 
-
-						Example code for Cross-correlation in MATLAB is:
-								r=xcorr(x,y)
-						           [c,lags] = xcorr(x,y);
+Example code for Cross-correlation in MATLAB is:
+r=xcorr(x,y)
+[c,lags] = xcorr(x,y);
 
 ## 3) Signal Addition
 
@@ -35,10 +34,9 @@ Addition of two time-series/signals is the addition of their corresponding ampli
     <img width="400" height="400" src="https://user-images.githubusercontent.com/67193440/178098155-07938d2a-8279-4a16-83a9-81284a54d453.png">
 </p>
 
-
-							Example MATLAB code for addition:
-								     z=y1+y2;
-						      Where, y1=signal 1 and y2=signal 2
+Example MATLAB code for addition:
+z=y1+y2;
+Where, y1=signal 1 and y2=signal 2
 
 ## 4) Signal subtraction
 
@@ -48,9 +46,9 @@ Subtraction of two time-series/signals is the subtraction of their corresponding
     <img width="400" height="400" src="https://user-images.githubusercontent.com/67193440/178098187-7eb7967e-c63a-4390-8b7e-29effc94a095.png">
 </p>
 
-						       Example MATLAB code for Subtraction:
-								      z=y1-y2;
-							Where, y1=signal 1 and y2=signal 2
+Example MATLAB code for Subtraction:
+z=y1-y2;
+Where, y1=signal 1 and y2=signal 2
 							
 ## 5) Signal Multiplication
 
@@ -60,9 +58,9 @@ Multiplication of two signals is the multiplication of the amplitudes or the Y-a
     <img width="400" height="400" src="https://user-images.githubusercontent.com/67193440/178098208-3f25b80c-d679-4c96-903b-9746a6d72845.png">
 </p>
 
-						    Example code for multiplication in MATLAB:
-								     z=y1.*y2;
-							Where, y1=signal 1 and y2=signal 2
+Example code for multiplication in MATLAB:
+z=y1.*y2;
+Where, y1=signal 1 and y2=signal 2
 							
 ## 6) Time-shifting 
 
@@ -93,12 +91,12 @@ Where,  (A)- Expanded signal
     <img width="400" height="250" src="https://user-images.githubusercontent.com/67193440/178098294-51b36bf9-e000-47c2-89fd-ef4c1cea3724.png">
 </p>
 	
-								Example code for Time-Scaling in MATLAB:
-									        t=x/b;
-									        (or)
-									        t=x*b;
-									Where, x-Input signal
-            								  b-Scaling factor
+Example code for Time-Scaling in MATLAB:
+t=x/b;
+(or)
+t=x*b;
+Where, x-Input signal
+b-Scaling factor
 
 ## 8) Time-Reversal
 
@@ -109,13 +107,12 @@ Time-reversal is applicable on both continuous and discrete signal. The Y-axis a
 </p>
 
 
-						Where, x(t) is the original signal and x(-t) is the reversed signal.
-							   Example code of Time-Reversal in MATLAB:
-									       m=-x;
-									       (or)
-									    c=fliplr(x);
-
-								   Where, x-original input signal.
+Where, x(t) is the original signal and x(-t) is the reversed signal.
+Example code of Time-Reversal in MATLAB:
+m=-x;
+(or)
+c=fliplr(x);
+Where, x-original input signal.
 
 ## 9) Convolution:
 
@@ -125,8 +122,7 @@ Convolution is the amount of overlap of one function (here signal) x1 as it is s
     <img width="400" height="400" src="https://user-images.githubusercontent.com/67193440/178098419-aaecdf76-738b-4363-8f85-37b959b0e309.png">
 </p>
 
-
-							Example code for Convolution in MATLAB:
-								     z=conv(y1, y2);
-								   Where, y1-Signal-1
-								       y2-Signal-2
+Example code for Convolution in MATLAB:
+z=conv(y1, y2);
+Where, y1-Signal-1
+y2-Signal-2
