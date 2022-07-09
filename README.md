@@ -11,8 +11,9 @@ In this operation a single time series is considered. Its main purpose is to fin
     <img width="400" height="400" src="https://user-images.githubusercontent.com/67193440/178097850-9c773547-39f8-4e7f-89fe-8e787fdc3e86.png">
 </p>
 
-Example Code for auto-correlation in MATLAB for lag=15,
+<p align'center" width="100%> Example Code for auto-correlation in MATLAB for lag=15,
 acf = autocorr(Y,'NumLags',15);
+</p>
 
 ## 2) Cross-correlation:
 
