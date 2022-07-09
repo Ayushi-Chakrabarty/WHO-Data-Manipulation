@@ -126,7 +126,7 @@ Convolution is the amount of overlap of one function (here signal) x1 as it is s
 </p>
 
 
-								Example code for Convolution in MATLAB:
-									    z=conv(y1, y2);
-									  Where, y1-Signal-1
-									      y2-Signal-2
+							Example code for Convolution in MATLAB:
+								     z=conv(y1, y2);
+								   Where, y1-Signal-1
+								       y2-Signal-2
