@@ -1,0 +1,155 @@
+Signal Operations
+
+1)*******************Auto-correlation*******************
+
+x=VarName1;
+y=VarName6;
+figure
+autocorr(y)
+acf=autocorr(y, 'NumLags', 15);
+xlabel("Lag")
+ylabel("Sample Autocorrelation")
+title("Population Number in the year 2005")
+
+2)*******************Cross-Correlation*******************
+
+x=VarName6;
+y=Bothsexes;
+r=xcorr(x,y)
+[c,lags] = xcorr(x,y);
+stem(lags,c)
+xlabel("Lag")
+ylabel("Sample Cross-correlation")
+
+3)*******************Addition of school enrolment ratio of boys and girls in 192 countries*******************
+
+x=VarName1;
+y1=Netprimaryschool;
+subplot(3,1,1);
+plot(x, y1, '-b');
+title('Boys enrolment ratio')
+y2=VarName12;
+subplot(3,1,2);
+plot(x,y2, '-m');
+title('Girls enrolment ratio')
+z=y1+y2;
+subplot(3,1,3);
+plot(x,z,'-r');
+title('Boys and Girls enrolment ratio (%) added')
+
+4)*******************Subtraction of school enrolment ratio of girls from boys in 192 countries*******************
+
+x=VarName1;
+y1=Netprimaryschool;
+subplot(3,1,1);
+plot(x, y1, '-b');
+title('Boys enrolment ratio')
+y2=VarName12;
+subplot(3,1,2);
+plot(x,y2, '-m');
+title('Girls enrolment ratio')
+z=y1-y2;
+subplot(3,1,3);
+plot(x,z,'-r');
+title('Subtraction of enrolment ratios (boys-girls)')
+
+5)*******************Multiplication of signals for 192 values*******************
+
+x=VarName2;
+y1=Netprimaryschool;
+subplot(3,1,1);
+stem(x, y1);
+title('Boys enrolment ratio')
+y2=VarName12;
+subplot(3,1,2);
+stem(x,y2);
+title('Girls enrolment ratio')
+z=y1.*y2;
+subplot(3,1,3);
+stem(x,z);
+title('Multiplication of enrolment ratios')
+
+6)*******************Time Shifting*******************
+
+x=VarName1;
+y=VarName7;
+a=20;
+subplot(3,1,1);
+plot(x, y, '-k');
+title('Annual Growth Rate for year 1995-2004 ')
+axis([-20, 200, 0, 5.0]);
+m=x-a;
+subplot(3,1,2);
+plot(m,y,'-g');
+title('Advanced annual growth rate')
+axis([-20, 200, 0, 5.0]);
+t=x+a;
+subplot(3,1,3);
+plot(t,y,'-r');
+title('Delayed annual growth rate')
+axis([-20, 200, 0, 5.0]);
+
+7)*******************Time-reversal*******************
+
+x=VarName1;
+y=VarName7;
+a=5;
+subplot(3,1,1);
+plot(x, y, '-k');
+title('Annual Growth Rate for year 1995-2004 ')
+m=x-a;
+subplot(3,1,2);
+plot(m,y,'-g');
+title('Advanced annual growth rate')
+t=-m;
+subplot(3,1,3);
+plot(t,y,'-m');
+title('Reversal of advanced annual growth rate')
+
+8)*******************Time scaling*******************
+
+• Contraction:
+
+x=VarName1;
+y=VarName7;
+b=2;
+subplot(2,1,1);
+plot(x, y, '-k');
+title('Annual Growth Rate for year 1995-2004 ')
+axis([0, 300, -4, 6]);
+t=x/b;
+subplot(2,1,2);
+plot(t,y, '-r');
+title('Scaled by 2 annual growth rate')
+axis([0,300,-4,6]);
+
+• Expansion:
+
+x=VarName1;
+y=VarName7;
+b=2;
+subplot(2,1,1);
+plot(x, y, '-k');
+title('Annual Growth Rate for year 1995-2004 ')
+axis([0, 500, -4, 6]);
+t=x*b;
+subplot(2,1,2);
+plot(t,y, '-r');
+title('Scaled by 2 annual growth rate')
+axis([0,500,-4,6]);
+
+9)*******************Convolution*******************
+
+x=VarName1;
+y1=Netprimaryschool;
+subplot(3,1,1);
+plot(x,y1,'-k');
+title('Net Primary School enrolment of Boys')
+y2=VarName12;
+subplot(3,1,2);
+plot(x,y2,'-g');
+title('Net Primary School enrolment of Girls')
+z=conv(y1, y2);
+subplot(3,1,3);
+plot(z);
+title('Convolution')
