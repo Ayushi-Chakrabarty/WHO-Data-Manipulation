@@ -8,7 +8,7 @@ Auto-correlation is a representation of the degree of similarity between a input
 In this operation a single time series is considered. Its main purpose is to find non-randomness in data.
 
 <p align="center" width="100%">
-    <img width="250" height="250" src="https://user-images.githubusercontent.com/67193440/178097850-9c773547-39f8-4e7f-89fe-8e787fdc3e86.png">
+    <img width="400" height="400" src="https://user-images.githubusercontent.com/67193440/178097850-9c773547-39f8-4e7f-89fe-8e787fdc3e86.png">
 </p>
 
  							Example Code for auto-correlation in MATLAB for lag=15,
