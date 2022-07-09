@@ -105,7 +105,7 @@ Where,  (A)- Expanded signal
 Time-reversal is applicable on both continuous and discrete signal. The Y-axis acts as a reflecting medium. The signal appears reflected/reversed with respect to the Y-axis.
 
 <p align="center" width="100%">
-    <img width="400" height="400" src="https://user-images.githubusercontent.com/67193440/178098349-24dc22cd-f647-4c58-b082-ed02a8b521fc.png">
+    <img width="400" height="250" src="https://user-images.githubusercontent.com/67193440/178098349-24dc22cd-f647-4c58-b082-ed02a8b521fc.png">
 </p>
 
 
