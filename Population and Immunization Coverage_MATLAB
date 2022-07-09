@@ -1,0 +1,154 @@
+# *********************Column 1- POPULATION*********************
+
+Sub-column 1:
+
+x=VarName1;
+y=VarName6;
+plot(x, y, ':k')
+xlabel('Countries')
+ylabel('Population Number')
+title('Year 2005')
+
+Sub-Column 2:
+
+x=VarName1;
+y=VarName7;
+plot(x, y, '-k')
+xlabel('Countries')
+ylabel('Annual Growth Rate')
+title('Year 1995-2004')
+
+Sub-Column 3:
+
+x=VarName1;
+y=VarName8;
+plot(x, y, '-k')
+xlabel('Countries')
+ylabel('Population % in urban areas')
+title('Year 2005')
+
+Sub-Column 4:
+
+x=VarName1;
+y=VarName9;
+plot(x, y, '-k')
+xlabel('Countries')
+ylabel('Total fertility rate (per woman) %')
+title('Year 2000-2004')
+
+# *********************Column-2: Adult literacy rate %*********************
+
+x=VarName1;
+y=Adult;
+plot(x,y,'-k')
+xlabel('Countries')
+ylabel('Adult literacy rate %')
+title('Year 2005')
+
+# *********************Column-3: Net Primary School Enrolment Ratio*********************
+
+x=VarName1;
+y1=Netprimaryschool;
+y2=VarName12;
+plot(x, y1, '-k', x, y2, '-m')
+legend('Boys', 'Girls')
+xlabel('Countries')
+ylabel('Net primary school enrolment %')
+title('Year 2001')
+
+# *********************Column:4 Gross national income per capita*********************
+
+x=VarName1;
+y=Grossnational;
+plot(x, y, '-k')
+xlabel('Countries')
+ylabel('Gross National Income per capita (US $)')
+title('Year 2003')
+
+#*********************Coverage*********************
+
+Column 1- Immunization coverage HepB3
+
+x=VarName1;
+y=VarName8;
+plot(x, y, '-k')
+xlabel('Countries')
+ylabel('Immunization coverage % among 1-year-olds HepB3')
+
+Column 2- Antenatal Coverage %
+
+x=VarName1;
+y=Antenatal;
+plot(x, y, '-k')
+xlabel('Countries')
+ylabel('Antenatal care coverage % ')
+title('Year 2000')
+title('Year 2003')
+
+# *********************Function operations*********************
+
+1) *********************Time Shifting*********************
+
+x=VarName1;
+y=Antenatal;
+subplot(3,1,1);
+plot(x,y, '-k');
+title('Antenatal care coverage %')
+m=x-20;
+axis([-20, 200, 0, 100]);
+subplot(3,1,2);
+plot(m, y, '-g');
+title('Advanced Antenatal care coverage %')
+t=x+20;
+axis([-20, 200, 0, 100]);
+subplot(3,1,3);
+plot(t,y, 'r');
+title('Delayed Antenatal care coverage %')
+axis([-20, 200, 0, 100]);
+
+2) *********************Time Reversal*********************
+Code:
+x=VarName1;
+y=VarName8;
+subplot(2,1,1);
+plot(x, y, '-k');
+title('Immunization coverage % for HepB3 ')
+axis([-200, 200, 0, 100]);
+t=-m;
+subplot(2,1,2);
+plot(t,y,'-m');
+title('Reversal of Immunization coverage % for HepB3')
+axis([-200, 200, 0, 100]);
+
+3) *********************Time-Scaling*********************
+
+• Contraction:
+
+x=VarName1;
+y=VarName8;
+b=2;
+subplot(2,1,1);
+plot(x, y, '-k');
+title('Immunization coverage % for HepB3 ')
+axis([0,300, 0, 100]);
+t=x/b;
+subplot(2,1,2);
+plot(t,y, '-r');
+title('Contracted Immunization coverage % for HepB3')
+axis([0,300, 0, 100]);
+
+• Expansion:
+
+x=VarName1;
+y=VarName8;
+b=2;
+subplot(2,1,1);
+plot(x, y, '-k');
+title('Immunization coverage % for HepB3 ')
+axis([0,500, 0, 100]);
+t=x*b;
+subplot(2,1,2);
+plot(t,y,'-r');
+title('Expanded Immunization coverage % for HepB3')
+axis([0,500, 0, 100]);
+
