@@ -2,7 +2,7 @@
 
 ## Relevance of the signal operations:
 
-1) Auto-correlation
+## 1) Auto-correlation
 
 Auto-correlation is a representation of the degree of similarity between a input time signal series and a delayed version of itself over running/sequential time intervals.
 In this operation a single time series is considered. Its main purpose is to find non-randomness in data.
@@ -14,7 +14,7 @@ In this operation a single time series is considered. Its main purpose is to fin
  							Example Code for auto-correlation in MATLAB for lag=15,
 								acf = autocorr(Y,'NumLags',15);
 
-2) Cross-correlation:
+## 2) Cross-correlation:
 
 Cross-correlation is used to find similarity of two series as a function of the displacement of one with respect to the other (shifted/lagged). In this operation, two different time series are evaluated at the same instance. If the cross-correlation coefficient is 1, then the two signals under consideration have a high similarity/direct relationship.
 
@@ -27,7 +27,7 @@ Cross-correlation is used to find similarity of two series as a function of the 
 								r=xcorr(x,y)
 						           [c,lags] = xcorr(x,y);
 
-3) Signal Addition
+## 3) Signal Addition
 
 Addition of two time-series/signals is the addition of their corresponding amplitudes or Y-axis values.
 
@@ -40,7 +40,7 @@ Addition of two time-series/signals is the addition of their corresponding ampli
 								     z=y1+y2;
 						      Where, y1=signal 1 and y2=signal 2
 
-4) Signal subtraction
+## 4) Signal subtraction
 
 Subtraction of two time-series/signals is the subtraction of their corresponding amplitudes or Y-axis values.
 
@@ -52,7 +52,7 @@ Subtraction of two time-series/signals is the subtraction of their corresponding
 								      z=y1-y2;
 							Where, y1=signal 1 and y2=signal 2
 							
-5) Signal Multiplication
+## 5) Signal Multiplication
 
 Multiplication of two signals is the multiplication of the amplitudes or the Y-axis values.
 
@@ -64,7 +64,7 @@ Multiplication of two signals is the multiplication of the amplitudes or the Y-a
 								     z=y1.*y2;
 							Where, y1=signal 1 and y2=signal 2
 							
-6) Time-shifting 
+## 6) Time-shifting 
 
 Time shifting of the signal refers to the shifting of the signal either by adding or subtracting along the time axis.
 
@@ -73,11 +73,11 @@ The two kinds of shifts are:
 2)	Positive shift, x(t-t0) or delayed signal
 
 <p align="center" width="100%">
-    <img width="400" height="400" src="https://user-images.githubusercontent.com/67193440/178098276-42ffd389-7185-45bf-ae54-9284c4650dfb.png">
+    <img width="400" height="250" src="https://user-images.githubusercontent.com/67193440/178098276-42ffd389-7185-45bf-ae54-9284c4650dfb.png">
 </p>
 
 
-7) Time-Scaling
+## 7) Time-Scaling
 
 Time scaling modifies the periodicity of the signal by keeping the amplitude constant.
 
@@ -90,17 +90,17 @@ Where,  (A)- Expanded signal
 	(B)- Compressed signal
 
 <p align="center" width="100%">
-    <img width="400" height="400" src="https://user-images.githubusercontent.com/67193440/178098294-51b36bf9-e000-47c2-89fd-ef4c1cea3724.png">
+    <img width="400" height="250" src="https://user-images.githubusercontent.com/67193440/178098294-51b36bf9-e000-47c2-89fd-ef4c1cea3724.png">
 </p>
 	
 								Example code for Time-Scaling in MATLAB:
-										t=x/b;
-										(or)
-										t=x*b;
+									        t=x/b;
+									        (or)
+									        t=x*b;
 									Where, x-Input signal
-            								   b-Scaling factor
+            								  b-Scaling factor
 
-8) Time-Reversal
+## 8) Time-Reversal
 
 Time-reversal is applicable on both continuous and discrete signal. The Y-axis acts as a reflecting medium. The signal appears reflected/reversed with respect to the Y-axis.
 
@@ -117,7 +117,7 @@ Time-reversal is applicable on both continuous and discrete signal. The Y-axis a
 
 								   Where, x-original input signal.
 
-9) Convolution:
+## 9) Convolution:
 
 Convolution is the amount of overlap of one function (here signal) x1 as it is shifted over the other function x2 (here signal). Mathematically, it is defined as the integral of the product of the two functions after one is reversed and shifted. It is a way of combining two signals to form the third signal based on the knowledge about the system’s unit impulse response.
 
