@@ -6,7 +6,7 @@
 Auto-correlation is a representation of the degree of similarity between a input time signal series and a delayed version of itself over running/sequential time intervals.
 In this operation a single time series is considered. Its main purpose is to find non-randomness in data.
 
-![alt text](https://en.wikipedia.org/wiki/Autocorrelation#/media/File:Comparison_convolution_correlation.svg)
+![Comparison_convolution_correlation svg](https://user-images.githubusercontent.com/67193440/178097752-8c356259-7e6b-4a60-9d9f-f19a508168ab.png)
 
  Example Code for auto-correlation in MATLAB for lag=15,
 		acf = autocorr(Y,'NumLags',15);
