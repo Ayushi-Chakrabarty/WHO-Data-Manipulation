@@ -30,7 +30,7 @@ ylabel('Immunization percentage for DTP3 ');
 
 *********************************SIGNAL MANIPULATION*********************************
 
-1)	AUTO CORRELATION OF IMMUNIZATION PERCENTAGE PLOT OF MEASLES 
+1)*********************************AUTO CORRELATION OF IMMUNIZATION PERCENTAGE PLOT OF MEASLES*********************************
 
 n=1:192;
 y=ms;
@@ -46,7 +46,7 @@ title('auto correlated signal x(n)');
 xlabel('192 different countries');
 ylabel('Immunization percentage for measles for 192 countries');
 
-2) AUTO CORRELATION OF IMMUNIZATION PERCENTAGE PLOT OF DTP3
+2)*********************************AUTO CORRELATION OF IMMUNIZATION PERCENTAGE PLOT OF DTP3*********************************
 
 n=1:192;
 y=d3;
@@ -62,7 +62,7 @@ title('auto correlated signal y(n)');
 xlabel('192 different countries');
 ylabel('Immunization percentage for DTP3 ');
 
-3) CROSS CORRELATION OF IMMUNIZATION PERCENTAGE PLOT FOR MEASLES AND DTP3
+3)*********************************CROSS CORRELATION OF IMMUNIZATION PERCENTAGE PLOT FOR MEASLES AND DTP3*********************************
 
 n=1:192;
 x=ms;
@@ -84,7 +84,7 @@ title('cross correlated signal z(n)');
 xlabel('countries');
 ylabel('Immunization percentage for measles and DTP3.');
 
-4) ADDITION OF IMMUNIZATION PERCENTAGE PLOT FOR MEASLES AND DTP3
+4)*********************************ADDITION OF IMMUNIZATION PERCENTAGE PLOT FOR MEASLES AND DTP3*********************************
 
 x=ms;
 subplot(3,1,1);
@@ -125,7 +125,7 @@ xlabel('countries');
 ylabel('Immunization percentage for DTP3 and measles.');
 
 
-5) SUBTRACTION OF IMMUNIZATION PERCENTAGE PLOT FOR MEASLES AND DTP3
+5)*********************************SUBTRACTION OF IMMUNIZATION PERCENTAGE PLOT FOR MEASLES AND DTP3*********************************
 
 x=ms;
 subplot(3,1,1);
@@ -146,7 +146,7 @@ title('Signal Immunization percentage for Measles and DTP3 subtracted for 192 co
 xlabel('countries');
 ylabel('Immunization percentage for DTP3 and measles.');
 
-6) MULTIPLICATION OF IMMUNIZATION PERCENTAGE PLOT FOR MEASLES AND DPT3
+6)*********************************MULTIPLICATION OF IMMUNIZATION PERCENTAGE PLOT FOR MEASLES AND DPT3*********************************
 
 x=ms;
 subplot(3,1,1);
@@ -186,7 +186,7 @@ title('Signal Immunization percentage for Measles and DTP3 multiplied for 192 co
 xlabel('countries');
 ylabel('Immunization percentage for DTP3 and measles.');
 
-7) TIME SHIFTING OF IMMUNIZATION PERCENTAGE PLOT FOR MEASLES 
+7)*********************************TIME SHIFTING OF IMMUNIZATION PERCENTAGE PLOT FOR MEASLES*********************************
 
 %n1=AMOUNT TO BE DELAYED.
 %n2=AMOUNT TO BE ADVANCED.
@@ -240,7 +240,7 @@ title('Advanced Immunization percentage for measles siganl,x(n+n2)');
 xlabel('countries')
 ylabel('Immunization percentage for Measles.');
 
-8) TIME SHIFTING OF IMMUNIZATION PERCENTAGE PLOT FOR DTP3
+8)*********************************TIME SHIFTING OF IMMUNIZATION PERCENTAGE PLOT FOR DTP3*********************************
 
 %n1=AMOUNT TO BE DELAYED.
 %n2=AMOUNT TO BE ADVANCED.
@@ -294,7 +294,7 @@ title('Advanced Immunization percentage for DTP3 siganl,y(n+n2)');
 xlabel('countries')
 ylabel('Immunization percentage for DTP3.');
 
-9) TIME REVERSAL OF IMMUNIZATION PERCENTAGE PLOT FOR MEASLES
+9)*********************************TIME REVERSAL OF IMMUNIZATION PERCENTAGE PLOT FOR MEASLES*********************************
 
 n=1:192;
 x=ms;
@@ -330,7 +330,7 @@ title('Reversed signal x(n)');
 xlabel('countries')
 ylabel('Immunization percentage for Measles.');
 
-10) TIME REVERSAL OF IMMUNIZATION PERCENTAGE PLOT FOR DPT3
+10)*********************************TIME REVERSAL OF IMMUNIZATION PERCENTAGE PLOT FOR DPT3*********************************
 
 n=1:192;
 x=d3;
@@ -367,7 +367,7 @@ xlabel('countries')
 ylabel('Immunization percentage for DTP3.');
 % n=1:192;
 
-11) TIME SCALING (CONTRACTION) OF IMMUNIZATION PERCENTAGE PLOT FOR MASSES
+11)*********************************TIME SCALING (CONTRACTION) OF IMMUNIZATION PERCENTAGE PLOT FOR MASSES*********************************
 
 x=1:192; 
 y=ms; 
@@ -403,7 +403,7 @@ xlabel('countries')
 ylabel('Immunization percentage for Measles.');
 axis([0,200,0,200]); 
 
-12) TIME SCALING (EXPANSION) OF IMMUNIZATION PERCENTAGE PLOT FOR DPT3
+12)*********************************TIME SCALING (EXPANSION) OF IMMUNIZATION PERCENTAGE PLOT FOR DPT3*********************************
 
 x=1:192; 
 y=d3; 
@@ -438,7 +438,7 @@ xlabel('countries')
 ylabel('Immunization percentage for DTP3.');
 axis([0,400,0,200]); 
 
-13) CONVOLUTION OF IMMUNIZATION PERCENTAGE PLOT FOR MEASLES AND DPT3
+13)*********************************CONVOLUTION OF IMMUNIZATION PERCENTAGE PLOT FOR MEASLES AND DPT3*********************************
 
 n1=1:192;
 n2=1:192;
